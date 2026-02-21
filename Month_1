@@ -1,0 +1,610 @@
+ Week 1
+
+1️⃣ Objective
+
+The objective of Week 1 was to understand the fundamentals of Python programming and develop basic problem-solving skills using Python.
+
+2️⃣ Concepts Learned
+🔹 1. Variables
+
+Variables are used to store data values in Python.
+Example:
+
+name = "Snehal"
+age = 21
+🔹 2. Data Types
+
+Python supports different types of data:
+
+Integer (int) → 10
+
+Float → 10.5
+
+String → "Hello"
+
+Boolean → True / False
+
+Example:
+
+a = 10
+b = 5.5
+c = "Python"
+d = True
+🔹 3. Operators
+
+Operators are used to perform operations on variables.
+
+Arithmetic Operators:
+
+(Addition)
+
+(Subtraction)
+
+(Multiplication)
+
+/ (Division)
+
+% (Modulus)
+
+🔹 4. Input and Output
+
+The input() function is used to take user input and print() is used to display output.
+
+Example:
+
+name = input("Enter your name: ")
+print("Hello", name)
+
+
+🔹 5. Conditional Statements (if-else)
+
+Used to make decisions in programs.
+
+Example:
+
+num = 10
+if num > 5:
+    print("Number is greater than 5")
+else:
+    print("Number is smaller")
+🔹 6. Loops
+For Loop
+
+Used when the number of iterations is known.
+
+for i in range(5):
+    print(i)
+While Loop
+
+Used when the number of iterations is unknown.
+
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+
+
+--------------------------------------------------------
+ Learning Outcome
+
+By completing Week 1:
+
+I understood Python syntax and basic structure.
+
+I learned how to use variables and data types.
+
+I practiced decision-making using conditional statements.
+
+I implemented loops for repetition.
+
+I created simple real-world programs.
+
+I developed a basic data processing script.
+
+Week 1 helped me build a strong foundation in Python programming, which will be useful for data analysis and future projects.
+------------------------------------------------------------------------------------------------------------------------------------------
+Week-2
+Month 1 – Data Structures and Functions
+
+Snehal 😊
+Here is your **Week 2 and Week 3 complete report + Python scripts** ready to submit on Google Classroom.
+
+You can copy this into Word/PDF as your report.
+
+---
+
+# 📘 WEEK 2 REPORT
+
+## Month 1 – Data Structures and Functions
+
+### 👩‍💻 Student Name: Snehal Badakh
+
+### 📅 Week: 2
+
+### 📚 Topic: Data Structures and Functions
+
+---
+
+# 1️⃣ Objective
+
+The objective of Week 2 was to understand Python data structures and functions and apply them for data transformation and cleaning.
+
+---
+
+# 2️⃣ Concepts Learned
+
+## 🔹 1. Lists
+
+Lists are ordered and mutable collections.
+
+```python
+numbers = [10, 20, 30, 40]
+print(numbers[0])
+```
+
+---
+
+## 🔹 2. Tuples
+
+Tuples are ordered but immutable.
+
+```python
+data = (1, 2, 3)
+print(data[1])
+```
+
+---
+
+## 🔹 3. Dictionaries
+
+Dictionaries store data in key-value pairs.
+
+```python
+student = {"name": "Snehal", "age": 21}
+print(student["name"])
+```
+
+---
+
+## 🔹 4. Sets
+
+Sets store unique values.
+
+```python
+nums = {1, 2, 2, 3}
+print(nums)
+```
+
+---
+
+## 🔹 5. Functions
+
+Functions help reuse code.
+
+```python
+def greet(name):
+    return "Hello " + name
+
+print(greet("Snehal"))
+```
+
+---
+
+## 🔹 6. Lambda Function
+
+Anonymous function written in one line.
+
+```python
+square = lambda x: x * x
+print(square(5))
+```
+
+---
+
+## 🔹 7. Recursion
+
+Function calling itself.
+
+```python
+def factorial(n):
+    if n == 1:
+        return 1
+    return n * factorial(n-1)
+
+print(factorial(5))
+```
+
+---
+
+## 🔹 8. List Comprehension
+
+```python
+numbers = [1, 2, 3, 4]
+squares = [x*x for x in numbers]
+print(squares)
+```
+
+---
+
+# 3️⃣ Hands-On Programs
+
+### ✅ Sum of Squares
+
+```python
+numbers = [1, 2, 3, 4, 5]
+result = sum([x*x for x in numbers])
+print("Sum of Squares:", result)
+```
+
+---
+
+### ✅ Filtering Even Numbers
+
+```python
+numbers = [10, 15, 20, 25, 30]
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print("Even Numbers:", even_numbers)
+```
+
+---
+
+# 4️⃣ Client Project – Data Cleaning Script
+
+### 📊 Project: Remove Duplicates and Filter Data
+
+```python
+data = [10, 20, 20, 30, 40, 40, 50]
+
+# Remove duplicates
+clean_data = list(set(data))
+
+# Filter values greater than 25
+filtered_data = [x for x in clean_data if x > 25]
+
+print("Clean Data:", clean_data)
+print("Filtered Data:", filtered_data)
+```
+
+---
+
+# 5️⃣ Learning Outcome
+
+* Understood different data structures.
+* Learned how to create reusable functions.
+* Applied lambda and recursion.
+* Performed basic data cleaning operations.
+
+---
+
+---
+
+ WEEK 3 REPORT
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Month 1 – NumPy and Pandas for Data Manipulation
+
+
+# 1️⃣ Objective
+
+The objective of Week 3 was to learn data manipulation using NumPy and Pandas for structured datasets.
+
+---
+
+# 2️⃣ Concepts Learned
+
+## 🔹 1. NumPy Arrays
+
+NumPy is used for numerical operations.
+
+```python
+import numpy as np
+
+arr = np.array([1, 2, 3, 4])
+print(arr * 2)
+```
+
+---
+
+## 🔹 2. NumPy Operations & Broadcasting
+
+```python
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+print(arr1 + arr2)
+```
+
+---
+
+## 🔹 3. Pandas Series
+
+```python
+import pandas as pd
+
+data = pd.Series([10, 20, 30])
+print(data)
+```
+
+---
+
+## 🔹 4. Pandas DataFrame
+
+```python
+data = {
+    "Name": ["A", "B", "C"],
+    "Marks": [80, 85, 90]
+}
+
+df = pd.DataFrame(data)
+print(df)
+```
+
+---
+
+## 🔹 5. Indexing and Selection
+
+```python
+print(df["Marks"])
+```
+
+---
+
+## 🔹 6. Data Grouping
+
+```python
+df.groupby("Name").mean()
+```
+
+---
+
+# 3️⃣ Hands-On Practice
+
+### Load Dataset
+
+```python
+df = pd.read_csv("data.csv")
+print(df.head())
+```
+
+---
+
+### Calculate Average
+
+```python
+print("Average Marks:", df["Marks"].mean())
+```
+
+---
+
+# 4️⃣ Client Project – Data Cleaning & Aggregation
+
+### 📊 Project: Clean and Analyze Dataset
+
+```python
+import pandas as pd
+
+data = {
+    "Name": ["A", "B", "C", "D"],
+    "Marks": [80, None, 90, 85]
+}
+
+df = pd.DataFrame(data)
+
+# Remove missing values
+df = df.dropna()
+
+# Calculate average marks
+average_marks = df["Marks"].mean()
+
+print("Cleaned Data:")
+print(df)
+
+print("Average Marks:", average_marks)
+```
+
+---
+
+# 5️⃣ Learning Outcome
+
+* Learned NumPy arrays and operations.
+* Understood Pandas DataFrame and Series.
+* Performed data cleaning.
+* Calculated aggregate values.
+* Gained practical experience in data manipulation.
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Snehal 😊
+Here is your **Week 4 complete report + Python script** ready to submit on Google Classroom.
+
+---------------------------------------------------------------------------------------------------------------------
+
+# 📘 WEEK 4 REPORT
+
+## Month 1 – Data Visualization with Matplotlib and Seaborn
+
+
+
+
+# 1️⃣ Objective
+
+The objective of Week 4 was to understand data visualization techniques using Matplotlib and Seaborn to analyze relationships between dataset features.
+
+---
+
+# 2️⃣ Concepts Learned
+
+---
+
+## 🔹 1. Matplotlib
+
+Matplotlib is a Python library used for creating basic plots and charts.
+
+It is mainly used for:
+
+* Line Charts
+* Bar Charts
+* Histograms
+* Scatter Plots
+
+---
+
+### 📊 Common Matplotlib Plots
+
+![Image](https://www.w3schools.com/python/img_matplotlib_line_red.png)
+
+![Image](https://www.w3schools.com/python/img_matplotlib_bars1.png)
+
+![Image](https://www.w3schools.com/python/img_matplotlib_histogram1.png)
+
+![Image](https://files.realpython.com/media/commute_times.621e5b1ce062.png)
+
+Example:
+
+```python
+import matplotlib.pyplot as plt
+
+x = [1,2,3,4]
+y = [10,20,25,30]
+
+plt.plot(x,y)
+plt.title("Line Chart")
+plt.xlabel("X Axis")
+plt.ylabel("Y Axis")
+plt.show()
+```
+
+---
+
+## 🔹 2. Seaborn
+
+Seaborn is built on top of Matplotlib and provides advanced statistical visualizations.
+
+It is mainly used for:
+
+* Heatmaps
+* Pairplots
+* Boxplots
+* Distribution plots
+
+---
+
+### 📊 Common Seaborn Plots
+
+![Image](https://seaborn.pydata.org/_images/heatmap_5_0.png)
+
+![Image](https://seaborn.pydata.org/_images/pairplot_11_0.png)
+
+![Image](https://seaborn.pydata.org/_images/boxplot_5_0.png)
+
+![Image](https://seaborn.pydata.org/_images/boxplot_3_0.png)
+
+Example:
+
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+tips = sns.load_dataset("tips")
+sns.scatterplot(x="total_bill", y="tip", data=tips)
+plt.show()
+```
+
+---
+
+# 3️⃣ Hands-On Practice
+
+✔ Created Line Chart
+✔ Created Bar Chart
+✔ Created Histogram
+✔ Created Scatter Plot
+✔ Created Heatmap
+
+---
+
+# 4️⃣ Client Project – Mini Dashboard
+
+## 📊 Project: Student Performance Visualization Dashboard
+
+In this project, I created multiple visualizations to understand relationships between student marks and study hours.
+
+---
+
+# 💻 WEEK 4 PYTHON SCRIPT
+
+Save as: `week4_visualization.py`
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Create sample dataset
+data = {
+    "Student": ["A", "B", "C", "D", "E"],
+    "Study_Hours": [2, 4, 6, 3, 5],
+    "Marks": [50, 65, 85, 60, 75]
+}
+
+df = pd.DataFrame(data)
+
+# -----------------------------
+# 1. Line Plot
+plt.figure()
+plt.plot(df["Student"], df["Marks"])
+plt.title("Student Marks Line Chart")
+plt.xlabel("Student")
+plt.ylabel("Marks")
+plt.show()
+
+# -----------------------------
+# 2. Bar Plot
+plt.figure()
+plt.bar(df["Student"], df["Marks"])
+plt.title("Marks Bar Chart")
+plt.xlabel("Student")
+plt.ylabel("Marks")
+plt.show()
+
+# -----------------------------
+# 3. Histogram
+plt.figure()
+plt.hist(df["Marks"], bins=5)
+plt.title("Marks Distribution")
+plt.xlabel("Marks")
+plt.ylabel("Frequency")
+plt.show()
+
+# -----------------------------
+# 4. Scatter Plot
+plt.figure()
+plt.scatter(df["Study_Hours"], df["Marks"])
+plt.title("Study Hours vs Marks")
+plt.xlabel("Study Hours")
+plt.ylabel("Marks")
+plt.show()
+
+# -----------------------------
+# 5. Heatmap
+plt.figure()
+corr = df[["Study_Hours", "Marks"]].corr()
+sns.heatmap(corr, annot=True)
+plt.title("Correlation Heatmap")
+plt.show()
+```
+
+---
+
+# 5️⃣ Learning Outcome
+
+By completing Week 4:
+
+* I understood the importance of data visualization.
+* I created different types of charts using Matplotlib.
+* I used Seaborn for advanced visualizations.
+* I analyzed relationships between dataset features.
+* I created a mini dashboard combining multiple plots.
+
+
+
+
+
