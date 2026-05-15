@@ -1,0 +1,235 @@
+SQL Practice Task –  Orders Database
+Task:
+
+Create an Amazon Orders database table and write SQL queries for:
+
+Creating table
+Inserting records
+Selecting data
+Filtering data
+Sorting data
+Aggregate functions
+Group By
+Update
+Delete
+Alter table
+-------------------------------------------------------------------------------
+
+
+
+
+-- DDL -> data defination language it give defination how will data struture
+drop table am_orders;
+create table am_orders(
+order_id  int NOT NULL UNIQUE  DEFAULT,-- constraint 1
+order_date date,
+product_name varchar(50),
+total int ,
+payment_method varchar(20) check (payment_method in ('UPI' , 'Credit Card')) default 'UPI'-- check constraint
+);
+insert into am_orders values(1,'2020-11-19','babymilk',30.6,'UPI');
+select * from am_orders;
+--DML -> data manipulation  any malupation like insert update delete
+insert into am_orders values(1,'2020-11-19','babymilk',30.6,'Net');
+insert into am_orders values(2,'2020-11-19','milk',30.6,'UPI');
+insert into am_orders values(3,'2020-11-19','Sugur',30.6,'CASH');
+insert into am_orders values(3,'2020-11-14','soab',30.6,'UPI');
+insert into am_orders values(4,'2020-11-13','pen',30.6,'UPI');
+insert into am_orders values(5,'2020-11-12','tale',30.6,'UPI');
+insert into am_orders values(6,'2020-11-12','babymilk',36,'UPI');
+insert into am_orders values(7,'2020-11-12','milk',323.6,'UPI');
+insert into am_orders values(8,'2020-12-13','Sugur',230.6,'CASH');
+insert into am_orders values(9,'2020-11-14','soab',380.6,'UPI');
+insert into am_orders values(10,'2020-11-14','pen',60.6,'UPI');
+insert into am_orders values(11,'2020-11-16','tale',45.6,'UPI');
+-- DQl -> Data querying language
+select *from am_orders;
+-- limiting col or selecting specific records 
+select top 2 * from am_orders;
+select * from am_orders limit 3;
+-- data sorting
+-- it will prefernce left- to -right.
+select *from 
+am_orders order by order_id desc,  product_name desc;
+-- delete  a table
+--DDL
+-- for delete table
+drop table am_orders;
+-- to delete data all row
+-- update data time of col
+alter table am_orders alter column order_date datetime;
+insert into am_orders values(11,'2004-01-14 12:09:10','shoes',900,'UPI');
+select * from am_orders;
+-- adding coloum
+alter table am_orders add username varchar(20);
+
+insert into am_orders values(12,'2004-01-14 12:09:10','shoes',900,'UPI','snehal');
+select * from am_orders;
+
+alter table am_orders alter column order_id date ; --DDl data type should be compatible
+-- if table is empty  we can change any thisng from any data type TO ANY
+
+alter table am_orders  add disscount int;
+--UPDATE
+ update am_orders set disscount =10 
+
+ update am_orders set disscount =20 where order_id=1;
+ --DELETE
+ delete from am_orders where product_name = 'milk';
+
+ -- Find Total Number of Orders
+
+
+-- Display total number of orders present in the table.
+
+SELECT COUNT(*) AS total_orders
+FROM am_orders;
+--  Find Maximum Order Amount
+
+SELECT MAX(total) AS highest_amount
+FROM am_orders;
+
+-- Find Minimum Order Amount
+
+SELECT MIN(total) AS minimum_amount
+FROM am_orders;
+
+--  Find Average Order Amount
+
+
+SELECT AVG(total) AS average_amount
+FROM am_orders;
+
+-- Calculate total sales amount.
+
+SELECT SUM(total) AS total_sales
+FROM am_orders;
+
+--Show all unique products.
+
+SELECT DISTINCT product_name
+FROM am_orders;
+
+--Display orders between 2020-11-12 and 2020-11-15.
+
+SELECT *
+FROM am_orders
+WHERE order_date BETWEEN '2020-11-12' AND '2020-11-15';
+
+
+--Display products starting with 'b'.
+
+SELECT *
+FROM am_orders
+WHERE product_name LIKE 'b%';
+
+
+--Display all UPI payment orders.
+
+SELECT *
+FROM am_orders
+WHERE payment_method = 'UPI';
+
+--Display orders having amount greater than 100.
+
+SELECT *
+FROM am_orders
+WHERE total > 100;
+
+
+--Count orders according to payment method.
+
+SELECT payment_method, COUNT(*) AS total_orders
+FROM am_orders
+GROUP BY payment_method;
+
+--Find total sales of each product.
+
+SELECT product_name, SUM(total) AS total_sales
+FROM am_orders
+GROUP BY product_name;
+
+--Display products whose total sales are greater than 100.
+
+SELECT product_name, SUM(total) AS total_sales
+FROM am_orders
+GROUP BY product_name
+HAVING SUM(total) > 100;
+
+
+--Rename column disscount to discount.
+
+EXEC sp_rename 'am_orders.disscount', 'discount', 'COLUMN';
+
+
+--Delete order where order_id = 5.
+
+DELETE FROM am_orders
+WHERE order_id = 5;
+16. Add Primary Key
+Question:
+
+--Make order_id primary key.
+
+ALTER TABLE am_orders
+ADD PRIMARY KEY(order_id);
+
+
+--Add customer_city column.
+
+ALTER TABLE am_orders
+ADD customer_city VARCHAR(20);
+
+
+--Update city name for order_id 2.
+
+UPDATE am_orders
+SET customer_city = 'Pune'
+WHERE order_id = 2;
+
+
+--Sort orders by total amount ascending.
+
+SELECT *
+FROM am_orders
+ORDER BY total ASC;
+
+
+--Display second highest order amount.
+
+SELECT MAX(total) AS second_highest
+FROM am_orders
+WHERE total < (
+    SELECT MAX(total)
+    FROM am_orders
+);
+
+
+--Delete all records but keep table structure.
+
+TRUNCATE TABLE am_orders;
+
+
+-- Delete customer_city column.
+
+ALTER TABLE am_orders
+DROP COLUMN customer_city;
+
+
+--Create backup of am_orders table.
+
+SELECT *
+INTO am_orders_backup
+FROM am_orders;
+
+
+--Display current system date.
+
+SELECT GETDATE();
+
+
+--Display top 3 highest total orders.
+
+SELECT TOP 3 *
+FROM am_orders
+ORDER BY total DESC;
