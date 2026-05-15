@@ -1,0 +1,339 @@
+# Month 4 – Data Visualization with Power BI
+
+## Task 1 – Introduction to Power BI
+
+### Task:
+
+Install Power BI Desktop and understand:
+
+* Home Tab
+* Transform Data
+* Visualizations Panel
+* Fields Panel
+* Report View
+* Data View
+* Model View
+
+### Practical Activity:
+
+Open Power BI and import `sales.csv` dataset.
+
+---
+
+# Task 2 – Data Import in Power BI
+
+### Question:
+
+Import CSV dataset into Power BI.
+
+### Steps:
+
+1. Open Power BI Desktop
+2. Click **Home → Get Data**
+3. Select **Text/CSV**
+4. Choose `sales.csv`
+5. Click **Load**
+
+### Expected Result:
+
+Dataset successfully loaded into Power BI.
+
+---
+
+# Task 3 – Data Transformation
+
+### Question:
+
+Clean and transform data using Power Query Editor.
+
+### Tasks:
+
+* Remove null values
+* Change data types
+* Rename columns
+* Remove duplicates
+* Split date column
+
+### Steps:
+
+1. Click **Transform Data**
+2. Open Power Query Editor
+3. Apply transformations
+4. Click **Close & Apply**
+
+---
+
+# Task 4 – Create KPI Cards
+
+### Question:
+
+Create KPI cards for:
+
+* Total Revenue
+* Total Profit
+* Total Orders
+* Average Units Sold
+
+### DAX Formulas:
+
+## Total Revenue
+
+```DAX id="pbi101"
+Total Revenue = SUM(sales[Total Revenue])
+```
+
+---
+
+## Total Profit
+
+```DAX id="pbi102"
+Total Profit = SUM(sales[Total Profit])
+```
+
+---
+
+## Total Orders
+
+```DAX id="pbi103"
+Total Orders = COUNT(sales[Order ID])
+```
+
+---
+
+## Average Units Sold
+
+```DAX id="pbi104"
+Average Units Sold = AVERAGE(sales[Units Sold])
+```
+
+---
+
+# Task 5 – Create Bar Chart
+
+### Question:
+
+Create bar chart for Top 5 Countries by Revenue.
+
+### Steps:
+
+1. Select **Bar Chart**
+2. Drag:
+
+   * Country → Axis
+   * Total Revenue → Values
+3. Sort descending
+4. Apply Top N filter
+
+### Insight:
+
+Shows highest revenue generating countries.
+
+---
+
+# Task 6 – Create Pie Chart
+
+### Question:
+
+Create pie chart for Sales Channel distribution.
+
+### Steps:
+
+1. Select Pie Chart
+2. Drag:
+
+   * Sales Channel → Legend
+   * Sales Channel → Values
+
+### Insight:
+
+Shows percentage of Online vs Offline sales.
+
+---
+
+# Task 7 – Create Line Chart
+
+### Question:
+
+Create line chart for profit trend over time.
+
+### Steps:
+
+1. Select Line Chart
+2. Drag:
+
+   * Order Date → Axis
+   * Total Profit → Values
+
+### Insight:
+
+Shows profit growth trend.
+
+---
+
+# Task 8 – Create Table Visual
+
+### Question:
+
+Display:
+
+* Country
+* Item Type
+* Total Revenue
+* Total Profit
+
+### Steps:
+
+1. Select Table Visual
+2. Add required fields
+
+---
+
+# Task 9 – Create Slicer
+
+### Question:
+
+Add slicer for Region filter.
+
+### Steps:
+
+1. Select Slicer Visual
+2. Drag Region field
+
+### Benefit:
+
+Users can filter dashboard dynamically.
+
+---
+
+# Task 10 – Dashboard Customization
+
+### Tasks:
+
+* Add dashboard title
+* Change theme
+* Resize visuals
+* Add background color
+* Format labels
+* Add borders & shadows
+
+### Example Title:
+
+```text
+Amazon Sales Analysis Dashboard
+```
+
+---
+
+# Task 11 – Create Interactive Dashboard
+
+### Question:
+
+Build complete dashboard containing:
+
+* KPI Cards
+* Bar Chart
+* Pie Chart
+* Line Chart
+* Table
+* Slicer
+
+### Dashboard Layout:
+
+| Section | Visual             |
+| ------- | ------------------ |
+| Top     | KPI Cards          |
+| Left    | Bar Chart          |
+| Right   | Pie Chart          |
+| Bottom  | Line Chart & Table |
+
+---
+
+# Task 12 – Create Business Insights
+
+### Question:
+
+Generate business insights from dashboard.
+
+### Example Insights:
+
+* Highest revenue generated from Asia region
+* Electronics category has highest sales
+* Online sales are higher than offline
+* Profit increased during festive season
+
+---
+
+# Task 13 – Create Report Page
+
+### Question:
+
+Create separate report pages for:
+
+* Sales Analysis
+* Profit Analysis
+* Regional Analysis
+
+### Steps:
+
+1. Click "+" icon at bottom
+2. Create multiple pages
+3. Rename pages
+
+---
+
+# Task 14 – Publish Power BI Report
+
+### Question:
+
+Publish report to Power BI Service.
+
+### Steps:
+
+1. Click **Publish**
+2. Login Power BI account
+3. Select Workspace
+4. Upload report
+
+---
+
+# Task 15 – Share Dashboard
+
+### Question:
+
+Share Power BI dashboard with team members.
+
+### Steps:
+
+1. Open Power BI Service
+2. Click Share
+3. Enter email IDs
+4. Set permissions
+
+---
+
+# Task 16 – Final Mini Project
+
+## Project Title:
+
+### Amazon Sales Dashboard
+
+### Requirements:
+
+Create interactive dashboard showing:
+
+* Total Revenue
+* Total Profit
+* Top Countries
+* Sales Channel Analysis
+* Product Category Analysis
+* Monthly Profit Trend
+
+### Tools Used:
+
+* Power BI
+* Power Query
+* DAX
+
+### Expected Outcome:
+
+Interactive business dashboard with data-driven insights.
